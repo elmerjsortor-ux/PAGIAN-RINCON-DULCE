@@ -46,10 +46,10 @@
         .logo-area {
             display: table-cell;
             vertical-align: middle;
-            width: 40%;
+            width: 30%;
         }
 
-        /* Contenedor diseñado para tu logotipo cargado */
+        /* Logotipo de la empresa */
         .logo-placeholder {
             display: inline-block;
             background: linear-gradient(135deg, var(--pastel-pink), #FCEAEF);
@@ -77,15 +77,15 @@
             display: table-cell;
             vertical-align: middle;
             text-align: right;
-            width: 60%;
+            width: 70%;
         }
 
         nav a {
             text-decoration: none;
             color: var(--dark-chocolate);
             font-weight: 600;
-            margin-left: 25px;
-            font-size: 15px;
+            margin-left: 20px;
+            font-size: 14px;
             transition: color 0.3s;
         }
 
@@ -229,6 +229,54 @@
             text-align: center;
         }
 
+        /* Apartado de Vacantes */
+        .vacantes-box {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            border: 1px solid var(--pastel-pink);
+            border-top: 6px solid var(--pastel-pink);
+        }
+
+        .vacante-card {
+            background: #FFFDFB;
+            border: 1px solid #EFECE6;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .vacante-badge {
+            display: inline-block;
+            background-color: var(--pastel-pink);
+            color: var(--dark-chocolate);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .btn-vacante {
+            display: inline-block;
+            background-color: var(--milk-chocolate);
+            color: var(--white);
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn-vacante:hover {
+            background-color: var(--dark-chocolate);
+            transform: translateY(-2px);
+        }
+
         /* Curriculum Vitae */
         .cv-section {
             background-color: var(--white);
@@ -314,7 +362,7 @@
             header { text-align: center; }
             .logo-area, nav { display: block; width: 100%; text-align: center; }
             nav { margin-top: 15px; }
-            nav a { margin: 0 10px; }
+            nav a { margin: 0 10px; font-size: 12px; }
         }
     </style>
 </head>
@@ -332,6 +380,7 @@
                 <a href="#coc">Cultura Corporativa</a>
                 <a href="#modelo">Modelo de Empresa</a>
                 <a href="#organigrama">Organigrama</a>
+                <a href="#vacantes">Vacantes Disponibles</a>
                 <a href="#cv">Curriculum Vitae</a>
             </nav>
         </div>
@@ -344,7 +393,7 @@
 
     <div class="container">
 
-        <section id="coc" class="cv-block">
+        <section id="coc" style="margin-top: 20px;">
             <h2 class="section-title">Cultura Organizacional Corporativa (C.O.C.)</h2>
             <div class="coc-grid">
                 <div class="coc-card">
@@ -362,7 +411,7 @@
             </div>
         </section>
 
-        <section id="modelo">
+        <section id="modelo" style="margin-top: 60px;">
             <h2 class="section-title">Modelo de Empresa</h2>
             <div class="modelo-box">
                 <h3>Modelo Adoptado: Modelo Integrado de Competencias por Resultados (MICR)</h3>
@@ -393,6 +442,29 @@
                         <strong>Sub-Chef de Decoración</strong><br>
                         <span>Diseño y Arte Creativo</span>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="vacantes" style="margin-top: 60px;">
+            <h2 class="section-title">Bolsa de Trabajo y Vacantes</h2>
+            <div class="vacantes-box">
+                <h3>Únete a nuestro Equipo de Talento Humano</h3>
+                <p>En <strong>El Rincón Dulce</strong> nos encontramos en la búsqueda constante de perfiles profesionales orientados al logro, con pasión por la repostería artesanal fina y la excelencia en el servicio.</p>
+                
+                <div class="vacante-card">
+                    <div class="vacante-badge">Plaza Abierta</div>
+                    <h4>Puesto: Auxiliar de Repostería / Decoración Creativa</h4>
+                    <p style="margin-top: 8px; font-size: 14px; color: var(--milk-chocolate);">
+                        <strong>Requisitos Básicos:</strong> Proactividad, enfoque en metas de producción, manejo básico de buenas prácticas de manufactura (BPM) e higiene alimentaria, y orientación al detalle estético en el acabado de pasteles.
+                    </p>
+                    <p style="margin-top: 8px; font-size: 14px;">
+                        <em>Para conocer a detalle las bases de la convocatoria, funciones principales, prestaciones y el formato oficial del perfil de este puesto, descarga el anuncio formal desde nuestro repositorio.</em>
+                    </p>
+                    
+                    <a href="https://drive.google.com/file/d/15_NYI0B9krChoBKJ7ft3p-8psycGVZEF/view?usp=sharing" target="_blank" class="btn-vacante">
+                        📥 Ver Anuncio de Vacante Completo (PDF)
+                    </a>
                 </div>
             </div>
         </section>
