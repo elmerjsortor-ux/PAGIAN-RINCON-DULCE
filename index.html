@@ -1,549 +1,571 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Rincón Dulce — Pastelería Artesanal & Tech</title>
-    <style>
-        /* Paleta de Colores Pastelería Fina */
-        :root {
-            --cream-bg: #FAF6F0;       /* Fondo suave de crema vainilla */
-            --pastel-pink: #F3D1D9;    /* Rosa pastel para acentos y frescura */
-            --dark-chocolate: #4A342B; /* Marrón chocolate oscuro para textos principales y elegancia */
-            --milk-chocolate: #7D5A4C; /* Marrón medio para subtítulos y bordes */
-            --gold-accent: #D4AF37;    /* Toque dorado para detalles premium */
-            --white: #FFFFFF;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Rincón Dulce — Pastelería Artesanal & Tech</title>
+<style>
+/* Paleta de Colores Pastelería Fina */
+:root {
+--cream-bg: #FAF6F0;       /* Fondo suave de crema vainilla */
+--pastel-pink: #F3D1D9;    /* Rosa pastel para acentos y frescura */
+--dark-chocolate: #4A342B; /* Marrón chocolate oscuro para textos principales y elegancia */
+--milk-chocolate: #7D5A4C; /* Marrón medio para subtítulos y bordes */
+--gold-accent: #D4AF37;    /* Toque dorado para detalles premium */
+--white: #FFFFFF;
+}
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-        body {
-            background-color: var(--cream-bg);
-            color: var(--dark-chocolate);
-            line-height: 1.6;
-        }
+body {
+background-color: var(--cream-bg);
+color: var(--dark-chocolate);
+line-height: 1.6;
+}
 
-        header {
-            background-color: var(--white);
-            border-bottom: 3px solid var(--pastel-pink);
-            padding: 20px 5%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
+header {
+background-color: var(--white);
+border-bottom: 3px solid var(--pastel-pink);
+padding: 20px 5%;
+position: sticky;
+top: 0;
+z-index: 1000;
+box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
 
-        .header-container {
-            display: table;
-            width: 100%;
-        }
+.header-container {
+display: table;
+width: 100%;
+}
 
-        .logo-area {
-            display: table-cell;
-            vertical-align: middle;
-            width: 30%;
-        }
+.logo-area {
+display: table-cell;
+vertical-align: middle;
+width: 30%;
+}
 
-        /* Logotipo de la empresa */
-        .logo-placeholder {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--pastel-pink), #FCEAEF);
-            border: 2px dashed var(--milk-chocolate);
-            padding: 12px 25px;
-            border-radius: 50px;
-            text-align: center;
-        }
+/* Logotipo de la empresa */
+.logo-placeholder {
+display: inline-block;
+background: linear-gradient(135deg, var(--pastel-pink), #FCEAEF);
+border: 2px dashed var(--milk-chocolate);
+padding: 12px 25px;
+border-radius: 50px;
+text-align: center;
+}
 
-        .logo-placeholder h1 {
-            font-size: 18px;
-            color: var(--dark-chocolate);
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
+.logo-placeholder h1 {
+font-size: 18px;
+color: var(--dark-chocolate);
+font-weight: 700;
+letter-spacing: 1px;
+}
 
-        .logo-placeholder span {
-            font-size: 11px;
-            display: block;
-            color: var(--milk-chocolate);
-            text-transform: uppercase;
-        }
+.logo-placeholder span {
+font-size: 11px;
+display: block;
+color: var(--milk-chocolate);
+text-transform: uppercase;
+}
 
-        nav {
-            display: table-cell;
-            vertical-align: middle;
-            text-align: right;
-            width: 70%;
-        }
+nav {
+display: table-cell;
+vertical-align: middle;
+text-align: right;
+width: 70%;
+}
 
-        nav a {
-            text-decoration: none;
-            color: var(--dark-chocolate);
-            font-weight: 600;
-            margin-left: 20px;
-            font-size: 14px;
-            transition: color 0.3s;
-        }
+nav a {
+text-decoration: none;
+color: var(--dark-chocolate);
+font-weight: 600;
+margin-left: 20px;
+font-size: 14px;
+transition: color 0.3s;
+}
 
-        nav a:hover {
-            color: var(--milk-chocolate);
-            border-bottom: 2px solid var(--pastel-pink);
-        }
+nav a:hover {
+color: var(--milk-chocolate);
+border-bottom: 2px solid var(--pastel-pink);
+}
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(250, 246, 240, 0.85), rgba(243, 209, 217, 0.4)), url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1200&auto=format&fit=crop') center/cover;
-            padding: 100px 5px;
-            text-align: center;
-            border-bottom: 2px solid var(--pastel-pink);
-        }
+/* Hero Section */
+.hero {
+background: linear-gradient(rgba(250, 246, 240, 0.85), rgba(243, 209, 217, 0.4)), url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=1200&auto=format&fit=crop') center/cover;
+padding: 100px 5px;
+text-align: center;
+border-bottom: 2px solid var(--pastel-pink);
+}
 
-        .hero h2 {
-            font-size: 42px;
-            color: var(--dark-chocolate);
-            margin-bottom: 15px;
-            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
-        }
+.hero h2 {
+font-size: 42px;
+color: var(--dark-chocolate);
+margin-bottom: 15px;
+text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
 
-        .slogan {
-            font-size: 20px;
-            color: var(--milk-chocolate);
-            font-style: italic;
-            font-weight: 600;
-            letter-spacing: 2px;
-            background: rgba(255, 255, 255, 0.8);
-            display: inline-block;
-            padding: 10px 30px;
-            border-radius: 30px;
-            border: 1px solid var(--pastel-pink);
-        }
+.slogan {
+font-size: 20px;
+color: var(--milk-chocolate);
+font-style: italic;
+font-weight: 600;
+letter-spacing: 2px;
+background: rgba(255, 255, 255, 0.8);
+display: inline-block;
+padding: 10px 30px;
+border-radius: 30px;
+border: 1px solid var(--pastel-pink);
+}
 
-        /* Contenedores principales */
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: 50px auto;
-        }
+/* Contenedores principales */
+.container {
+width: 90%;
+max-width: 1100px;
+margin: 50px auto;
+}
 
-        .section-title {
-            text-align: center;
-            font-size: 28px;
-            color: var(--dark-chocolate);
-            margin-bottom: 40px;
-            position: relative;
-            padding-bottom: 10px;
-        }
+.section-title {
+text-align: center;
+font-size: 28px;
+color: var(--dark-chocolate);
+margin-bottom: 40px;
+position: relative;
+padding-bottom: 10px;
+}
 
-        .section-title::after {
-            content: '';
-            width: 80px;
-            height: 3px;
-            background-color: var(--pastel-pink);
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-        }
+.section-title::after {
+content: '';
+width: 80px;
+height: 3px;
+background-color: var(--pastel-pink);
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+}
 
-        /* Cultura Organizacional (C.O.C.) */
-        .coc-grid {
-            display: table;
-            width: 100%;
-            table-layout: fixed;
-            border-collapse: separate;
-            border-spacing: 20px;
-        }
+/* Cultura Organizacional (C.O.C.) */
+.coc-grid {
+display: table;
+width: 100%;
+table-layout: fixed;
+border-collapse: separate;
+border-spacing: 20px;
+}
 
-        .coc-card {
-            display: table-cell;
-            background-color: var(--white);
-            padding: 30px;
-            border-radius: 15px;
-            border-top: 5px solid var(--milk-chocolate);
-            box-shadow: 0 5px 15px rgba(74, 52, 43, 0.04);
-            vertical-align: top;
-        }
+.coc-card {
+display: table-cell;
+background-color: var(--white);
+padding: 30px;
+border-radius: 15px;
+border-top: 5px solid var(--milk-chocolate);
+box-shadow: 0 5px 15px rgba(74, 52, 43, 0.04);
+vertical-align: top;
+}
 
-        .coc-card.vision {
-            border-top-color: var(--pastel-pink);
-        }
+.coc-card.vision {
+border-top-color: var(--pastel-pink);
+}
 
-        .coc-card.valores {
-            border-top-color: var(--gold-accent);
-        }
+.coc-card.valores {
+border-top-color: var(--gold-accent);
+}
 
-        .coc-card h3 {
-            margin-bottom: 15px;
-            font-size: 20px;
-            color: var(--dark-chocolate);
-        }
+.coc-card h3 {
+margin-bottom: 15px;
+font-size: 20px;
+color: var(--dark-chocolate);
+}
 
-        /* Modelo de Empresa Justificación */
-        .modelo-box {
-            background-color: var(--white);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
-            border-left: 6px solid var(--pastel-pink);
-            margin-top: 30px;
-        }
+/* Modelo de Empresa Justificación */
+.modelo-box {
+background-color: var(--white);
+padding: 40px;
+border-radius: 15px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+border-left: 6px solid var(--pastel-pink);
+margin-top: 30px;
+}
 
-        /* Organigrama */
-        .organigrama-box {
-            background-color: var(--white);
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
-        }
+/* Organigrama */
+.organigrama-box {
+background-color: var(--white);
+padding: 40px;
+border-radius: 15px;
+text-align: center;
+box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
 
-        .org-node {
-            background-color: var(--cream-bg);
-            border: 2px solid var(--milk-chocolate);
-            border-radius: 8px;
-            padding: 15px;
-            display: inline-block;
-            min-width: 200px;
-            margin: 10px;
-        }
+.org-node {
+background-color: var(--cream-bg);
+border: 2px solid var(--milk-chocolate);
+border-radius: 8px;
+padding: 15px;
+display: inline-block;
+min-width: 200px;
+margin: 10px;
+}
 
-        .org-node.ceo {
-            background-color: var(--pastel-pink);
-            border-color: var(--dark-chocolate);
-            font-weight: bold;
-        }
+.org-node.ceo {
+background-color: var(--pastel-pink);
+border-color: var(--dark-chocolate);
+font-weight: bold;
+}
 
-        .org-line {
-            width: 2px;
-            height: 20px;
-            background-color: var(--milk-chocolate);
-            margin: 0 auto;
-        }
+.org-line {
+width: 2px;
+height: 20px;
+background-color: var(--milk-chocolate);
+margin: 0 auto;
+}
 
-        .org-children {
-            margin-top: 15px;
-            text-align: center;
-        }
+.org-children {
+margin-top: 15px;
+text-align: center;
+}
 
-        /* Apartado de Vacantes */
-        .vacantes-box {
-            background-color: var(--white);
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
-            border: 1px solid var(--pastel-pink);
-            border-top: 6px solid var(--pastel-pink);
-        }
+/* Apartado de Vacantes */
+.vacantes-box {
+background-color: var(--white);
+padding: 40px;
+border-radius: 15px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+border: 1px solid var(--pastel-pink);
+border-top: 6px solid var(--pastel-pink);
+}
 
-        .vacante-card {
-            background: #FFFDFB;
-            border: 1px solid #EFECE6;
-            padding: 25px;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
+.vacante-card {
+background: #FFFDFB;
+border: 1px solid #EFECE6;
+padding: 25px;
+border-radius: 10px;
+margin-top: 20px;
+}
 
-        .vacante-badge {
-            display: inline-block;
-            background-color: var(--pastel-pink);
-            color: var(--dark-chocolate);
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
+.vacante-badge {
+display: inline-block;
+background-color: var(--pastel-pink);
+color: var(--dark-chocolate);
+padding: 4px 12px;
+border-radius: 20px;
+font-size: 12px;
+font-weight: bold;
+margin-bottom: 10px;
+text-transform: uppercase;
+}
 
-        .btn-vacante {
-            display: inline-block;
-            background-color: var(--milk-chocolate);
-            color: var(--white);
-            text-decoration: none;
-            padding: 12px 25px;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 14px;
-            margin-top: 20px;
-            transition: background-color 0.3s, transform 0.2s;
-        }
+.btn-vacante {
+display: inline-block;
+background-color: var(--milk-chocolate);
+color: var(--white);
+text-decoration: none;
+padding: 12px 25px;
+border-radius: 8px;
+font-weight: 600;
+font-size: 14px;
+margin-top: 20px;
+transition: background-color 0.3s, transform 0.2s;
+}
 
-        .btn-vacante:hover {
-            background-color: var(--dark-chocolate);
-            transform: translateY(-2px);
-        }
+.btn-vacante:hover {
+background-color: var(--dark-chocolate);
+transform: translateY(-2px);
+}
 
-        /* Contenedor del Formulario Integrado */
-        .form-container {
-            width: 100%;
-            margin-top: 25px;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid #EFECE6;
-            background-color: #ffffff;
-        }
+/* Curriculum Vitae */
+.cv-section {
+background-color: var(--white);
+border-radius: 15px;
+padding: 40px;
+box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+border: 1px solid #EFECE6;
+}
 
-        /* Curriculum Vitae */
-        .cv-section {
-            background-color: var(--white);
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
-            border: 1px solid #EFECE6;
-        }
+.cv-header {
+border-bottom: 2px solid var(--cream-bg);
+padding-bottom: 20px;
+margin-bottom: 25px;
+}
 
-        .cv-header {
-            border-bottom: 2px solid var(--cream-bg);
-            padding-bottom: 20px;
-            margin-bottom: 25px;
-        }
+.cv-name {
+font-size: 26px;
+color: var(--dark-chocolate);
+}
 
-        .cv-name {
-            font-size: 26px;
-            color: var(--dark-chocolate);
-        }
+.cv-subtitle {
+color: var(--milk-chocolate);
+font-weight: 600;
+font-size: 16px;
+}
 
-        .cv-subtitle {
-            color: var(--milk-chocolate);
-            font-weight: 600;
-            font-size: 16px;
-        }
+.cv-body {
+display: table;
+width: 100%;
+}
 
-        .cv-body {
-            display: table;
-            width: 100%;
-        }
+.cv-col-left {
+display: table-cell;
+width: 35%;
+padding-right: 30px;
+border-right: 1px solid #EFECE6;
+vertical-align: top;
+}
 
-        .cv-col-left {
-            display: table-cell;
-            width: 35%;
-            padding-right: 30px;
-            border-right: 1px solid #EFECE6;
-            vertical-align: top;
-        }
+.cv-col-right {
+display: table-cell;
+width: 65%;
+padding-left: 30px;
+vertical-align: top;
+}
 
-        .cv-col-right {
-            display: table-cell;
-            width: 65%;
-            padding-left: 30px;
-            vertical-align: top;
-        }
+.cv-block {
+margin-bottom: 25px;
+}
 
-        .cv-block {
-            margin-bottom: 25px;
-        }
+.cv-block h4 {
+color: var(--milk-chocolate);
+text-transform: uppercase;
+font-size: 14px;
+letter-spacing: 1px;
+margin-bottom: 10px;
+border-left: 3px solid var(--pastel-pink);
+padding-left: 8px;
+}
 
-        .cv-block h4 {
-            color: var(--milk-chocolate);
-            text-transform: uppercase;
-            font-size: 14px;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-            border-left: 3px solid var(--pastel-pink);
-            padding-left: 8px;
-        }
+.cv-item {
+margin-bottom: 12px;
+font-size: 14px;
+}
 
-        .cv-item {
-            margin-bottom: 12px;
-            font-size: 14px;
-        }
+.cv-item strong {
+color: var(--dark-chocolate);
+}
 
-        .cv-item strong {
-            color: var(--dark-chocolate);
-        }
+footer {
+background-color: var(--dark-chocolate);
+color: var(--cream-bg);
+text-align: center;
+padding: 30px;
+font-size: 14px;
+margin-top: 60px;
+}
 
-        footer {
-            background-color: var(--dark-chocolate);
-            color: var(--cream-bg);
-            text-align: center;
-            padding: 30px;
-            font-size: 14px;
-            margin-top: 60px;
-        }
-
-        /* Ajustes de adaptabilidad simple */
-        @media (max-width: 768px) {
-            .coc-grid, .cv-body { display: block; }
-            .coc-card, .cv-col-left, .cv-col-right { display: block; width: 100%; padding: 15px 0; border: none; }
-            header { text-align: center; }
-            .logo-area, nav { display: block; width: 100%; text-align: center; }
-            nav { margin-top: 15px; }
-            nav a { margin: 0 10px; font-size: 12px; }
-        }
-    </style>
+/* Ajustes de adaptabilidad simple */
+@media (max-width: 768px) {
+.coc-grid, .cv-body { display: block; }
+.coc-card, .cv-col-left, .cv-col-right { display: block; width: 100%; padding: 15px 0; border: none; }
+header { text-align: center; }
+.logo-area, nav { display: block; width: 100%; text-align: center; }
+nav { margin-top: 15px; }
+nav a { margin: 0 10px; font-size: 12px; }
+}
+</style>
 </head>
 <body>
 
-    <header>
-        <div class="header-container">
-            <div class="logo-area">
-                <div class="logo-placeholder">
-                    <h1>EL RINCÓN DULCE</h1>
-                    <span>Pastelería Artesanal</span>
-                </div>
-            </div>
-            <nav>
-                <a href="#coc">Cultura Corporativa</a>
-                <a href="#modelo">Modelo de Empresa</a>
-                <a href="#organigrama">Organigrama</a>
-                <a href="#vacantes">Vacantes Disponibles</a>
-                <a href="#postulacion">Formulario de Postulación</a>
-                <a href="#cv">Curriculum Vitae</a>
-            </nav>
-        </div>
-    </header>
+<header>
+<div class="header-container">
+<div class="logo-area">
+<div class="logo-placeholder">
+<h1>EL RINCÓN DULCE</h1>
+<span>Pastelería Artesanal</span>
+</div>
+</div>
+<nav>
+<a href="#coc">Cultura Corporativa</a>
+<a href="#modelo">Modelo de Empresa</a>
+<a href="#organigrama">Organigrama</a>
+<a href="#vacantes">Vacantes Disponibles</a>
+<a href="#cv">Curriculum Vitae</a>
+</nav>
+</div>
+</header>
 
-    <section class="hero">
-        <h2>Bienvenidos a Nuestra Identidad</h2>
-        <div class="slogan">CONTENIDO QUE CONECTA, TECNOLOGÍA QUE OPTIMIZA</div>
-    </section>
+<section class="hero">
+<h2>Bienvenidos a Nuestra Identidad</h2>
+<div class="slogan">CONTENIDO QUE CONECTA, TECNOLOGÍA QUE OPTIMIZA</div>
+</section>
 
-    <div class="container">
+<div class="container">
 
-        <section id="coc" style="margin-top: 20px;">
-            <h2 class="section-title">Cultura Organizacional Corporativa (C.O.C.)</h2>
-            <div class="coc-grid">
-                <div class="coc-card">
-                    <h3>Nuestra Misión</h3>
-                    <p>Proveer soluciones integrales en marketing digital, creación de contenido y optimización de procesos de ofimática, impulsando el crecimiento y la transformación digital de nuestros clientes locales e internacionales mediante estrategias innovadoras, eficientes y exportables.</p>
-                </div>
-                <div class="coc-card vision">
-                    <h3>Nuestra Visión</h3>
-                    <p>Ser la agencia líder y referente global en la exportación de servicios digitales y soluciones de ofimática.</p>
-                </div>
-                <div class="coc-card valores">
-                    <h3>Valores Corporativos</h3>
-                    <p><strong>BRILLANTEZ:</strong> Nuestra cultura se basa en la Brillantez Creativa y Técnica. Fusionamos el arte del contenido con la precisión de la ingeniería de oficina.</p>
-                </div>
-            </div>
-        </section>
+<section id="coc" style="margin-top: 20px;">
+<h2 class="section-title">Cultura Organizacional Corporativa (C.O.C.)</h2>
+<div class="coc-grid">
+<div class="coc-card">
+<h3>Nuestra Misión</h3>
+<p>Proveer soluciones integrales en marketing digital, creación de contenido y optimización de procesos de ofimática, impulsando el crecimiento y la transformación digital de nuestros clientes locales e internacionales mediante estrategias innovadoras, eficientes y exportables.</p>
+</div>
+<div class="coc-card vision">
+<h3>Nuestra Visión</h3>
+<p>Ser la agencia líder y referente global en la exportación de servicios digitales y soluciones de ofimática.</p>
+</div>
+<div class="coc-card valores">
+<h3>Valores Corporativos</h3>
+<p><strong>BRILLANTEZ:</strong> Nuestra cultura se basa en la Brillantez Creativa y Técnica.
+Fusionamos el arte del contenido con la precisión de la ingeniería de oficina.</p>
+</div>
+</div>
+</section>
 
-        <section id="modelo" style="margin-top: 60px;">
-            <h2 class="section-title">Modelo de Empresa</h2>
-            <div class="modelo-box">
-                <h3>Modelo Adoptado: Modelo Integrado de Competencias por Resultados (MICR)</h3>
-                <p style="margin-top: 10px;">
-                    <strong>Justificación Técnica:</strong> Este modelo combina de manera precisa la descripción técnica de cada cargo con el perfil conductual y los indicadores clave de desempeño esperados (KPIs). Es ideal para un entorno que equilibra la formalidad organizativa del bachillerato administrativo-contable con la flexibilidad y creatividad que exigen las tendencias modernas de producción culinaria y digital, asegurando un alto nivel de productividad y control de calidad.
-                </p>
-            </div>
-        </section>
+<section id="modelo" style="margin-top: 60px;">
+<h2 class="section-title">Modelo de Empresa</h2>
+<div class="modelo-box">
+<h3>Modelo Adoptado: Modelo Integrado de Competencias por Resultados (MICR)</h3>
+<p style="margin-top: 10px;">
+<strong>Justificación Técnica:</strong> Este modelo combina de manera precisa la descripción técnica de cada cargo con el perfil conductual y los indicadores clave de desempeño esperados (KPIs).
+Es ideal para un entorno que equilibra la formalidad organizativa del bachillerato administrativo-contable con la flexibilidad y creatividad que exigen las tendencias modernas de producción culinaria y digital, asegurando un alto nivel de productividad y control de calidad.
+</p>
+</div>
+</section>
 
-        <section id="organigrama" style="margin-top: 60px;">
-            <h2 class="section-title">Organigrama Empresarial</h2>
-            <div class="organigrama-box">
-                <div class="org-node ceo">
-                    <strong>Dirección General (CEO)</strong><br>
-                    <span>Meyling Elizabeth Guzman Morales</span>
-                </div>
-                <div class="org-line"></div>
-                <div class="org-children">
-                    <div class="org-node">
-                        <strong>Chef Pastelero Ejecutivo</strong><br>
-                        <span>Producción y Recetas</span>
-                    </div>
-                    <div class="org-node">
-                        <strong>Control de Calidad</strong><br>
-                        <span>Inocuidad y BPM</span>
-                    </div>
-                    <div class="org-node">
-                        <strong>Sub-Chef de Decoración</strong><br>
-                        <span>Diseño y Arte Creativo</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+<section id="organigrama" style="margin-top: 60px;">
+<h2 class="section-title">Organigrama Empresarial</h2>
+<div class="organigrama-box">
+<div class="org-node ceo">
+<strong>Dirección General (CEO)</strong><br>
+<span>Meyling Elizabeth Guzman Morales</span>
+</div>
+<div class="org-line"></div>
+<div class="org-children">
+<div class="org-node">
+<strong>Chef Pastelero Ejecutivo</strong><br>
+<span>Producción y Recetas</span>
+</div>
+<div class="org-node">
+<strong>Control de Calidad</strong><br>
+<span>Inocuidad y BPM</span>
+</div>
+<div class="org-node">
+<strong>Sub-Chef de Decoración</strong><br>
+<span>Diseño y Arte Creativo</span>
+</div>
+</div>
+</div>
+</section>
 
-        <section id="vacantes" style="margin-top: 60px;">
-            <h2 class="section-title">Bolsa de Trabajo y Vacantes</h2>
-            <div class="vacantes-box">
-                <h3>Únete a nuestro Equipo de Talento Humano</h3>
-                <p>En <strong>El Rincón Dulce</strong> nos encontramos en la búsqueda constante de perfiles profesionales orientados al logro, con pasión por la repostería artesanal fina y la excelencia en el servicio.</p>
-                
-                <div class="vacante-card">
-                    <div class="vacante-badge">Plaza Abierta</div>
-                    <h4>Puesto: Auxiliar de Repostería / Decoración Creativa</h4>
-                    <p style="margin-top: 8px; font-size: 14px; color: var(--milk-chocolate);">
-                        <strong>Requisitos Básicos:</strong> Proactividad, enfoque en metas de producción, manejo básico de buenas prácticas de manufactura (BPM) e higiene alimentaria, y orientación al detalle estético en el acabado de pasteles.
-                    </p>
-                    <p style="margin-top: 8px; font-size: 14px;">
-                        <em>Para conocer a detalle las bases de la convocatoria, funciones principales, prestaciones y el formato oficial del perfil de este puesto, descarga el anuncio formal desde nuestro repositorio.</em>
-                    </p>
-                    
-                    <a href="https://drive.google.com/file/d/15_NYI0B9krChoBKJ7ft3p-8psycGVZEF/view?usp=sharing" target="_blank" class="btn-vacante">
-                        📥 Ver Anuncio de Vacante Completo (PDF)
-                    </a>
-                </div>
-            </div>
-        </section>
+<section id="vacantes" style="margin-top: 60px;">
+<h2 class="section-title">Bolsa de Trabajo y Vacantes</h2>
+<div class="vacantes-box">
+<h3>Únete a nuestro Equipo de Talento Humano</h3>
+<p>En <strong>El Rincón Dulce</strong> nos encontramos en la búsqueda constante de perfiles profesionales orientados al logro, con pasión por la repostería artesanal fina y la excelencia en el servicio.</p>
 
-        <section id="postulacion" style="margin-top: 60px;">
-            <h2 class="section-title">Formulario de Postulación</h2>
-            <div class="vacantes-box" style="border-top-color: var(--gold-accent); text-align: center;">
-                <h3>Aplica en Línea</h3>
-                <p style="margin-top: 10px; margin-bottom: 15px;">
-                    Completa tus datos directamente en el siguiente formulario para iniciar tu proceso de postulación con nosotros en <strong>El Rincón Dulce</strong>.
-                </p>
-                <div class="form-container">
-                    <iframe src="https://docs.google.com/forms/d/1MkDm0yVML9LQGSRptB_oXJx1urWQ4aek4Kkmq6OMHN8/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando formulario...</iframe>
-                </div>
-            </div>
-        </section>
+<div class="vacante-card">
+<div class="vacante-badge">Plaza Abierta</div>
+<h4>Puesto: Auxiliar de Repostería / Decoración Creativa</h4>
+<p style="margin-top: 8px; font-size: 14px; color: var(--milk-chocolate);">
+<strong>Requisitos Básicos:</strong> Proactividad, enfoque en metas de producción, manejo básico de buenas prácticas de manufactura (BPM) e higiene alimentaria, y orientación al detalle estético en el acabado de pasteles.
+</p>
+<p style="margin-top: 8px; font-size: 14px;">
+<em>Para conocer a detalle las bases de la convocatoria, funciones principales, prestaciones y el formato oficial del perfil de este puesto, descarga el anuncio formal desde nuestro repositorio.</em>
+</p>
 
-        <section id="cv" style="margin-top: 60px;">
-            <h2 class="section-title">Curriculum Vitae Institucional</h2>
-            <div class="cv-section">
-                <div class="cv-header">
-                    <h3 class="cv-name">Meyling Elizabeth Guzman Morales</h3>
-                    <p class="cv-subtitle">Estudiante de Bachillerato Técnico — Opción Administrativo Contable</p>
-                </div>
-                
-                <div class="cv-body">
-                    <div class="cv-col-left">
-                        <div class="cv-block">
-                            <h4>Contacto</h4>
-                            <p class="cv-item"><strong>Correo:</strong> 19909940@clases.edu.sv</p>
-                            <p class="cv-item"><strong>Ubicación:</strong> Santa Rosa de Lima, La Unión, El Salvador</p>
-                        </div>
-                        <div class="cv-block">
-                            <h4>Habilidades Técnicas</h4>
-                            <p class="cv-item">• Gestión Financiera y Contable</p>
-                            <p class="cv-item">• Diseño y Control de KPIs</p>
-                            <p class="cv-item">• Legislación Mercantil y Laboral</p>
-                            <p class="cv-item">• Ofimática y Contenido Digital</p>
-                        </div>
-                    </div>
-                    
-                    <div class="cv-col-right">
-                        <div class="cv-block">
-                            <h4>Educación y Formación</h4>
-                            <div class="cv-item">
-                                <strong>Tercer Año de Bachillerato Técnico Vocacional</strong><br>
-                                <span>Instituto Nacional Profesor Francisco Ventura Zelaya (Sección "A")</span><br>
-                                <small>Especialización en Aplicación de Legislación y Gestión del Recurso Humano.</small>
-                            </div>
-                        </div>
-                        
-                        <div class="cv-block">
-                            <h4>Proyectos Destacados</h4>
-                            <div class="cv-item">
-                                <strong>Fundadora y CEO — El Rincón Dulce</strong><br>
-                                <span>Desarrollo del Manual de Perfiles de Puestos bajo el enfoque de Competencias por Resultados e implementación de normativas de inocuidad alimentaria.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<a href="https://drive.google.com/file/d/15_NYI0B9krChoBKJ7ft3p-8psycGVZEF/view?usp=sharing" target="_blank" class="btn-vacante">
+📥 Ver Anuncio de Vacante Completo (PDF)
+</a>
+</div>
+</div>
+</section>
 
-    </div>
+<section id="cv" style="margin-top: 60px;">
+<h2 class="section-title">Curriculum Vitae Institucional</h2>
+<div class="cv-section">
+<div class="cv-header">
+<h3 class="cv-name">Meyling Elizabeth Guzman Morales</h3>
+<p class="cv-subtitle">Estudiante de Bachillerato Técnico — Opción Administrativo Contable</p>
+</div>
 
-    <footer>
-        <p>&copy; 2026 El Rincón Dulce — Práctica de la Gestión Empresarial. Diseñado para fines académicos y profesionales.</p>
-    </footer>
+<div class="cv-body">
+<div class="cv-col-left">
+<div class="cv-block">
+<h4>Contacto</h4>
+<p class="cv-item"><strong>Correo:</strong> 19909940@clases.edu.sv</p>
+<p class="cv-item"><strong>Ubicación:</strong> Santa Rosa de Lima, La Unión, El Salvador</p>
+</div>
+<div class="cv-block">
+<h4>Habilidades Técnicas</h4>
+<p class="cv-item">• Gestión Financiera y Contable</p>
+<p class="cv-item">• Diseño y Control de KPIs</p>
+<p class="cv-item">• Legislación Mercantil y Laboral</p>
+<p class="cv-item">• Ofimática y Contenido Digital</p>
+</div>
+</div>
+
+<div class="cv-col-right">
+<div class="cv-block">
+<h4>Educación y Formación</h4>
+<div class="cv-item">
+<strong>Tercer Año de Bachillerato Técnico Vocacional</strong><br>
+<span>Instituto Nacional Profesor Francisco Ventura Zelaya (Sección "A")</span><br>
+<small>Especialización en Aplicación de Legislación y Gestión del Recurso Humano.</small>
+</div>
+</div>
+
+<div class="cv-block">
+<h4>Proyectos Destacados</h4>
+<div class="cv-item">
+<strong>Fundadora y CEO — El Rincón Dulce</strong><br>
+<span>Desarrollo del Manual de Perfiles de Puestos bajo el enfoque de Competencias por Resultados e implementación de normativas de inocuidad alimentaria.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="personal-seleccionado" style="margin-top: 60px;">
+<h2 class="section-title">Personal Seleccionado para los Puestos de Trabajo</h2>
+<div class="modelo-box" style="border-left: 6px solid var(--gold-accent);">
+<p style="margin-bottom: 20px;">Tras evaluar minuciosamente las competencias y perfiles de los aspirantes, nos complace presentar a los profesionales seleccionados que formarán parte de nuestro equipo de trabajo:</p>
+
+<div class="cv-body" style="margin-top: 15px;">
+<div class="cv-block" style="margin-bottom: 15px;">
+<p class="cv-item"><strong>Dayly Paola Melchor Chávez</strong> — <span style="color: var(--milk-chocolate); font-weight: 600;">CREADOR DE CONTENIDO</span></p>
+<p class="cv-item"><strong>Ashley Nicole Argueta Pineda</strong> — <span style="color: var(--milk-chocolate); font-weight: 600;">Atencion al cliente</span></p>
+<p class="cv-item"><strong>Samantha Denisse Méndez Matamoros</strong> — <span style="color: var(--milk-chocolate); font-weight: 600;">Gerente general</span></p>
+<p class="cv-item"><strong>Manuel Alexander Flores Granados</strong> — <span style="color: var(--milk-chocolate); font-weight: 600;">Asesor de ventas</span></p>
+<p class="cv-item"><strong>ELMER JOSUE SORTO ROMERO</strong> — <span style="color: var(--milk-chocolate); font-weight: 600;">FOTOGRAFO DE PRODUCTO.</span></p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="instrumentos-reclutamiento" style="margin-top: 60px;">
+<h2 class="section-title">Instrumentos de Reclutamiento y Selección</h2>
+<div class="vacantes-box" style="border-top: 6px solid var(--milk-chocolate);">
+<p style="margin-bottom: 20px;">Para garantizar la efectividad, transparencia e idoneidad durante el proceso de contratación, se utilizan de manera coordinada los siguientes instrumentos y metodologías:</p>
+
+<div class="vacante-card">
+<h4>1. EJEMPLO DE ENTREVISTA</h4>
+<p style="margin-top: 5px; font-size: 14px;"><strong>Concepto de uso:</strong> Sirve como una guía de preguntas estructuradas y situaciones hipotéticas alineadas a las competencias del puesto. Su objetivo es evaluar de forma directa la fluidez de comunicación, la experiencia práctica, los valores individuales y la reacción espontánea del candidato ante retos operativos cotidianos de la empresa.</p>
+</div>
+
+<div class="vacante-card">
+<h4>2. Tablas Comparativas de Criterios de Selección</h4>
+<p style="margin-top: 5px; font-size: 14px;"><strong>Concepto de uso:</strong> Actúan como una matriz técnica que unifica las ponderaciones de todos los postulantes. Permiten contrastar los méritos académicos, la experiencia laboral y los resultados de las evaluaciones, eliminando sesgos subjetivos para facilitar una toma de decisiones equitativa basada rigurosamente en méritos.</p>
+</div>
+
+<div class="vacante-card">
+<h4>3. Formato de Evaluación de Pruebas PSICOLOGICAS</h4>
+<p style="margin-top: 5px; font-size: 14px;"><strong>Concepto de uso:</strong> Se implementa para medir rasgos estables de la personalidad, inteligencia emocional, tolerancia a la frustración y compatibilidad con la cultura organizacional de la empresa. Ofrece un diagnóstico formal sobre si el perfil conductual del candidato se adaptará óptimamente a la dinámica laboral interna.</p>
+</div>
+
+<div class="vacante-card">
+<h4>4. Formatos_Seleccion_Psicometrica.xlsx</h4>
+<p style="margin-top: 5px; font-size: 14px;"><strong>Concepto de uso:</strong> Es la herramienta analítica digital (hoja de cálculo) que centraliza, automatiza y procesa numéricamente las puntuaciones de las pruebas psicométricas aplicadas. A través de fórmulas preestablecidas, genera gráficos e indicadores cuantitativos inmediatos para agilizar el diagnóstico técnico final del talento preseleccionado.</p>
+</div>
+</div>
+</section>
+
+</div>
+
+<footer>
+<p>&copy; 2026 El Rincón Dulce — Práctica de la Gestión Empresarial. Diseñado para fines académicos y profesionales.</p>
+</footer>
 
 </body>
 </html>
